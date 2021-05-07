@@ -71,7 +71,7 @@ function App() {
               Search{" "}
             </button>
           </form>
-          <h2>{main}</h2>
+          <h3>{main}</h3>
           <img
             style={{ width: 150, height: 150 }}
             src={`http://openweathermap.org/img/w/${icon}.png`}
