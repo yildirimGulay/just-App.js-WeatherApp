@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import { debounce } from "lodash";
 
 function App() {
   // use the api
@@ -19,15 +20,20 @@ function App() {
   const [main, setMain] = useState("");
 
   //form
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleClick = debounce ((term) => {
+    
 
     console.log("clicklendi");
 
     setQuery(term);
-  };
+  },500);
+
+
   console.log(`form term`, term);
   console.log();
+
+
+
 
   //Api
   useEffect(() => {
